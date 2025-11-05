@@ -1,0 +1,752 @@
+{
+	"info": {
+		"_postman_id": "f3c2b1ed-e6bc-464e-a89d-7d12a8d5263a",
+		"name": "TREINOTOTAL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50769",
+		"_collection_link": "https://senai3.postman.co/workspace/SENAI-Workspace~4dd192e6-30c0-456a-8596-3d158af21274/collection/50769-f3c2b1ed-e6bc-464e-a89d-7d12a8d5263a?action=share&source=collection_link&creator=50769"
+	},
+	"item": [
+		{
+			"name": "ALUNO",
+			"item": [
+				{
+					"name": "LISTA ALUNOS",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Niwibm9tZSI6IkFETUlOIiwiZW1haWwiOiJhZG1pbkB0cmVpbm90b3RhbC5jb20iLCJpYXQiOjE3MzA3Mjc5MzIsImV4cCI6MTczMDc0MjMzMn0.ljMADPuRUrACUi7WaIIsRauIXl_cVnOm6awOY8GBOfo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3333/listar/alunos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"listar",
+								"alunos"
+							]
+						},
+						"description": "### Listar Alunos\n\nEste endpoint realiza uma requisição HTTP GET para recuperar uma lista de alunos.\n\n#### Requisição (Request)\n\nA requisição não requer nenhum parâmetro.\n\n#### Resposta (Response)\n\nApós uma requisição bem-sucedida, o servidor responde com um código de status 200 e um array JSON contendo objetos de alunos. Cada objeto de aluno inclui os seguintes atributos:\n\n- `senha`: A senha do aluno\n    \n- `situacao`: O status do aluno\n    \n- `nome`: O nome do aluno\n    \n- `cpf`: O CPF (número de identificação brasileiro) do aluno\n    \n- `dataNascimento`: A data de nascimento do aluno\n    \n- `celular`: O número de telefone do aluno\n    \n- `endereco`: O endereço do aluno\n    \n- `email`: O endereço de e-mail do aluno\n    \n- `idAluno`: O identificador único do aluno\n    \n- `matricula`: O número de matrícula do aluno\n    \n- `altura`: A altura do aluno\n    \n- `peso`: O peso do aluno\n    \n- `imc`: O índice de massa corporal do aluno\n    \n\nOs valores para altura, peso e imc podem ser nulos."
+					},
+					"response": []
+				},
+				{
+					"name": "NOVO ALUNO",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Niwibm9tZSI6IkFETUlOIiwiZW1haWwiOiJhZG1pbkB0cmVpbm90b3RhbC5jb20iLCJpYXQiOjE3MzA3Mjc5MzIsImV4cCI6MTczMDc0MjMzMn0.ljMADPuRUrACUi7WaIIsRauIXl_cVnOm6awOY8GBOfo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Bernardo Edson Gael Carvalho\",\r\n    \"cpf\": \"33893122159\",\r\n    \"dataNascimento\": \"1999-05-13\",\r\n    \"celular\": \"86982203236\",\r\n    \"endereco\": \"Rua Adalberto Santana 379\",\r\n    \"email\": \"bernardo_carvalho@rebecacometerra.com.br\",\r\n    \"altura\": 1.80,\r\n    \"peso\": 82,\r\n    \"imc\": 25\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/novo/aluno",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"novo",
+								"aluno"
+							]
+						},
+						"description": "#### Cadastrar Aluno\n\nEste endpoint POST /cadastrar-aluno é utilizado para registrar um novo aluno. A requisição deve ser enviada para [http://localhost:3333/cadastrar-aluno](http://localhost:3333/cadastrar-aluno) utilizando o método HTTP POST.\n\n#### Requisição (Request)\n\nO corpo da requisição deve estar no formato JSON e incluir os seguintes parâmetros:\n\n- nome (string): O nome do aluno.\n    \n- cpf (string): O número do CPF do aluno.\n    \n- dataNascimento (string): A data de nascimento do aluno.\n    \n- celular (string): O número de telefone do aluno.\n    \n- endereco (string): O endereço do aluno.\n    \n- email (string): O endereço de e-mail do aluno.\n    \n- altura (number): A altura do aluno.\n    \n- peso (number): O peso do aluno.\n    \n- imc (number): O IMC (Índice de Massa Corporal) do aluno.\n    \n\n#### Resposta (Response)\n\nA resposta desta requisição é um objeto JSON representando os detalhes do registro do aluno. O esquema JSON para a resposta deve ser documentado com base na resposta real recebida da API."
+					},
+					"response": []
+				},
+				{
+					"name": "ATUALIZA ALUNO",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Niwibm9tZSI6IkFETUlOIiwiZW1haWwiOiJhZG1pbkB0cmVpbm90b3RhbC5jb20iLCJpYXQiOjE3MzA3Mjc5MzIsImV4cCI6MTczMDc0MjMzMn0.ljMADPuRUrACUi7WaIIsRauIXl_cVnOm6awOY8GBOfo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Bernardo Edson Gael Carvalho\",\r\n    \"cpf\": \"33893102160\",\r\n    \"dataNascimento\": \"1999-05-13\",\r\n    \"celular\": \"21982203036\",\r\n    \"endereco\": \"Rua Adalberto Santana, 379\",\r\n    \"email\": \"bernardo_carvalho@gmail.com.br\",\r\n    \"altura\": 1.80,\r\n    \"peso\": 82,\r\n    \"imc\": 25\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/atualizar/aluno?idAluno=11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"atualizar",
+								"aluno"
+							],
+							"query": [
+								{
+									"key": "idAluno",
+									"value": "11"
+								}
+							]
+						},
+						"description": "#### Atualizar Informações do Aluno\n\nEste endpoint permite que o cliente atualize as informações de um aluno específico.\n\n##### Requisição (Request)\n\n- **Método**: PUT\n    \n- **URL**: `http://localhost:3333/atualizar-aluno?idAluno=11`\n    \n- **Cabeçalhos**:\n    \n    - `Content-Type`: `application/json`\n        \n\n**Corpo (Body)**:\n\n- **nome** (string): O nome do aluno.\n    \n- **cpf** (string): O número de CPF do aluno.\n    \n- **dataNascimento** (string): A data de nascimento do aluno no formato YYYY-MM-DD.\n    \n- **celular** (string): O número de telefone do aluno.\n    \n- **endereco** (string): O endereço do aluno.\n    \n- **email** (string): O endereço de e-mail do aluno.\n    \n- **altura** (number): A altura do aluno.\n    \n- **peso** (number): O peso do aluno.\n    \n- **imc** (number): O índice de massa corporal (IMC) do aluno.\n    \n\n##### Resposta (Response)\n\nA resposta desta requisição é um objeto JSON com o esquema das informações atualizadas do aluno.\n\n``` json\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"idAluno\": {\n      \"type\": \"number\"\n    },\n    \"message\": {\n      \"type\": \"string\"\n    }\n  }\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "REMOVER ALUNO",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Niwibm9tZSI6IkFETUlOIiwiZW1haWwiOiJhZG1pbkB0cmVpbm90b3RhbC5jb20iLCJpYXQiOjE3MzA3Mjc5MzIsImV4cCI6MTczMDc0MjMzMn0.ljMADPuRUrACUi7WaIIsRauIXl_cVnOm6awOY8GBOfo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3333/remover/aluno?idAluno=11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"remover",
+								"aluno"
+							],
+							"query": [
+								{
+									"key": "idAluno",
+									"value": "11"
+								}
+							]
+						},
+						"description": "### Deletar Aluno\n\nEste endpoint envia uma requisição HTTP PUT para `http://localhost:3333/deletar-aluno` com o parâmetro de consulta `idAluno=11` para excluir um aluno específico.\n\n### Resposta (Response)\n\nA resposta dessa requisição será um objeto JSON que segue o esquema de dados abaixo, definindo as propriedades e seus tipos de dados presentes na resposta."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PROFESSOR",
+			"item": [
+				{
+					"name": "LISTAR PROFESSORES",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Niwibm9tZSI6IkFETUlOIiwiZW1haWwiOiJhZG1pbkB0cmVpbm90b3RhbC5jb20iLCJpYXQiOjE3MzA3Mjc5MzIsImV4cCI6MTczMDc0MjMzMn0.ljMADPuRUrACUi7WaIIsRauIXl_cVnOm6awOY8GBOfo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3333/listar/professores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"listar",
+								"professores"
+							]
+						},
+						"description": "### Listar Professores\n\nEste endpoint realiza uma requisição HTTP GET para recuperar uma lista de professores.\n\n### Resposta (Response)\n\nA resposta dessa requisição será um objeto JSON conforme o esquema de dados descrito abaixo, que define as propriedades e seus tipos de dados para cada professor na lista.\n\n``` json\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"professors\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"id\": {\n            \"type\": \"string\"\n          },\n          \"name\": {\n            \"type\": \"string\"\n          },\n          \"department\": {\n            \"type\": \"string\"\n          },\n          \"email\": {\n            \"type\": \"string\"\n          }\n        }\n      }\n    }\n  }\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "NOVO PROFESSOR",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Niwibm9tZSI6IkFETUlOIiwiZW1haWwiOiJhZG1pbkB0cmVpbm90b3RhbC5jb20iLCJpYXQiOjE3MzA3Mjc5MzIsImV4cCI6MTczMDc0MjMzMn0.ljMADPuRUrACUi7WaIIsRauIXl_cVnOm6awOY8GBOfo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Aline Elaine Beatriz Nunes\",\r\n    \"cpf\": \"04366482956\",\r\n    \"dataNascimento\": \"1999-03-16\",\r\n    \"celular\": \"82989170246\",\r\n    \"endereco\": \"Rua Doutor José de Albuquerque Porciúncula\",\r\n    \"email\": \"aline.elaine.nunes@outlook.com\",\r\n    \"dataContratacao\": \"2019-03-25\",\r\n    \"formacao\": \"PÓS-GRADUAÇÃO EM NUTRIÇÃO ESPORTIVA\",\r\n    \"especialidade\": \"SUPLEMENTAÇÃO ALIMENTAR\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/novo/professor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"novo",
+								"professor"
+							]
+						},
+						"description": "### Cadastrar Professor\n\nEste endpoint faz uma requisição HTTP POST para registrar um novo professor. A requisição deve incluir os seguintes parâmetros no corpo da requisição, no formato JSON:\n\n- **nome** (string): O nome do professor.\n    \n- **cpf** (string): O CPF do professor.\n    \n- **dataNascimento** (string): A data de nascimento do professor.\n    \n- **celular** (string): O número de telefone do professor.\n    \n- **endereco** (string): O endereço do professor.\n    \n- **email** (string): O e-mail do professor.\n    \n- **dataContratacao** (string): A data de contratação do professor.\n    \n- **formacao** (string): A formação acadêmica do professor.\n    \n- **especialidade** (string): A área de especialização do professor.\n    \n\n### Resposta (Response)\n\nA resposta dessa requisição será um objeto JSON que representa a estrutura de dados da resposta, definindo as propriedades e seus tipos que serão retornados após o cadastro bem-sucedido do professor."
+					},
+					"response": []
+				},
+				{
+					"name": "ATUALIZA PROFESSOR",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Niwibm9tZSI6IkFETUlOIiwiZW1haWwiOiJhZG1pbkB0cmVpbm90b3RhbC5jb20iLCJpYXQiOjE3MzA3Mjc5MzIsImV4cCI6MTczMDc0MjMzMn0.ljMADPuRUrACUi7WaIIsRauIXl_cVnOm6awOY8GBOfo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Aline Elaine Beatriz Nunes Oliveira\",\r\n    \"cpf\": \"04366402955\",\r\n    \"dataNascimento\": \"1999-03-16\",\r\n    \"celular\": \"82989170244\",\r\n    \"endereco\": \"Rua Doutor José de Albuquerque Porciúncula, 300\",\r\n    \"email\": \"aline.elaine.nunes@outlook.com\",\r\n    \"dataContratacao\": \"2019-03-25\",\r\n    \"formacao\": \"PÓS-GRADUAÇÃO EM NUTRIÇÃO ESPORTIVA\",\r\n    \"especialidade\": \"SUPLEMENTAÇÃO ALIMENTAR\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/atualizar/professor?idProfessor=7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"atualizar",
+								"professor"
+							],
+							"query": [
+								{
+									"key": "idProfessor",
+									"value": "7"
+								}
+							]
+						},
+						"description": "### Atualizar Professor\n\nEste endpoint é utilizado para atualizar as informações de um professor específico.\n\n#### Requisição (Request)\n\n- **Método**: PUT\n    \n- **URL**: `http://localhost:3333/atualizar-professor?idProfessor=7`\n    \n- **Headers**:\n    \n    - `Content-Type: application/json`\n        \n\n#### Corpo da Requisição (Body)\n\nO corpo da requisição deve conter os seguintes parâmetros:\n\n- **nome** (texto, obrigatório): O nome do professor.\n    \n- **cpf** (texto, obrigatório): O CPF (Cadastro de Pessoas Físicas) do professor.\n    \n- **dataNascimento** (texto, obrigatório): A data de nascimento do professor.\n    \n- **celular** (texto, obrigatório): O número de telefone celular do professor.\n    \n- **endereco** (texto, obrigatório): O endereço do professor.\n    \n- **email** (texto, obrigatório): O endereço de e-mail do professor.\n    \n- **dataContratacao** (texto, obrigatório): A data de contratação do professor.\n    \n- **formacao** (texto, obrigatório): A formação acadêmica do professor.\n    \n- **especialidade** (texto, obrigatório): A área de especialização do professor.\n    \n\n#### Resposta (Response)\n\nA resposta dessa requisição será um objeto JSON que representa o esquema com os detalhes atualizados do professor, incluindo os valores modificados das informações do professor."
+					},
+					"response": []
+				},
+				{
+					"name": "REMOVER PROFESSOR",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Niwibm9tZSI6IkFETUlOIiwiZW1haWwiOiJhZG1pbkB0cmVpbm90b3RhbC5jb20iLCJpYXQiOjE3MzA3Mjc5MzIsImV4cCI6MTczMDc0MjMzMn0.ljMADPuRUrACUi7WaIIsRauIXl_cVnOm6awOY8GBOfo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3333/remover/professor?idProfessor=7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"remover",
+								"professor"
+							],
+							"query": [
+								{
+									"key": "idProfessor",
+									"value": "7"
+								}
+							]
+						},
+						"description": "### Atualizar Exclusão de Professor\n\nEste endpoint é utilizado para excluir um professor específico, fornecendo o ID do professor na requisição.\n\n#### Requisição (Request)\n\n- **Método**: PUT\n    \n- **Endpoint**: `http://localhost:3333/deletar-professor`\n    \n- **Parâmetros de Consulta** (Query Parameters):\n    \n    - **idProfessor** (inteiro, obrigatório): O identificador único do professor a ser excluído.\n        \n\n#### Resposta (Response)\n\nA resposta dessa requisição será um objeto JSON conforme o esquema abaixo, representando a estrutura de dados retornada após a exclusão.\n\n``` json\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"status\": {\n      \"type\": \"string\",\n      \"description\": \"The status of the deletion process.\"\n    },\n    \"message\": {\n      \"type\": \"string\",\n      \"description\": \"A message providing details about the deletion operation.\"\n    }\n  }\n}\n\n ```"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "APARELHO",
+			"item": [
+				{
+					"name": "LISTA APARELHOS",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Niwibm9tZSI6IkFETUlOIiwiZW1haWwiOiJhZG1pbkB0cmVpbm90b3RhbC5jb20iLCJpYXQiOjE3MzA3Mjc5MzIsImV4cCI6MTczMDc0MjMzMn0.ljMADPuRUrACUi7WaIIsRauIXl_cVnOm6awOY8GBOfo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3333/listar/aparelhos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"listar",
+								"aparelhos"
+							]
+						},
+						"description": "### Listar Aparelhos\n\nEste endpoint realiza uma requisição HTTP GET para recuperar uma lista de aparelhos.\n\n#### Resposta (Response)\n\nA resposta é retornada em formato JSON e segue um esquema JSON que define a estrutura dos dados recebidos. Cada objeto de dispositivo no array de resposta contém as propriedades e seus respectivos tipos de dados, conforme documentado no esquema JSON."
+					},
+					"response": []
+				},
+				{
+					"name": "NOVO APARELHO",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Niwibm9tZSI6IkFETUlOIiwiZW1haWwiOiJhZG1pbkB0cmVpbm90b3RhbC5jb20iLCJpYXQiOjE3MzA3Mjc5MzIsImV4cCI6MTczMDc0MjMzMn0.ljMADPuRUrACUi7WaIIsRauIXl_cVnOm6awOY8GBOfo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeAparelho\": \"HALTER\",\r\n    \"musculoAtivado\": \"GERAL\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/novo/aparelho",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"novo",
+								"aparelho"
+							]
+						},
+						"description": "### Cadastrar Aparelho\n\nEste endpoint é usado para registrar um novo dispositivo.\n\n#### Requisição (Request)\n\n- **Método**: POST\n    \n- **URL**: [http://localhost:3333/cadastrar-aparelho](http://localhost:3333/cadastrar-aparelho)\n    \n\n**Corpo (Body)**:\n\n- **nomeAparelho**: (string) O nome do dispositivo a ser registrado.\n    \n- **musculoAtivado**: (string) O músculo ativado pelo dispositivo.\n    \n\n#### Resposta (Response)\n\nA resposta para esta requisição é um objeto JSON com o seguinte esquema:  \n(Insira aqui o esquema JSON correspondente à resposta esperada)\n\n``` json\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"status\": {\n      \"type\": \"string\"\n    },\n    \"message\": {\n      \"type\": \"string\"\n    }\n  }\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "ATUALIZA APARELHO",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Niwibm9tZSI6IkFETUlOIiwiZW1haWwiOiJhZG1pbkB0cmVpbm90b3RhbC5jb20iLCJpYXQiOjE3MzA3Mjc5MzIsImV4cCI6MTczMDc0MjMzMn0.ljMADPuRUrACUi7WaIIsRauIXl_cVnOm6awOY8GBOfo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeAparelho\": \"HALTER\",\r\n    \"musculoAtivado\": \"superior\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/atualizar/aparelho?idAparelho=14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"atualizar",
+								"aparelho"
+							],
+							"query": [
+								{
+									"key": "idAparelho",
+									"value": "14"
+								}
+							]
+						},
+						"description": "Este endpoint realiza uma requisição HTTP PUT para atualizar um dispositivo específico em [http://localhost:3333/atualizar-aparelho](http://localhost:3333/atualizar-aparelho). A requisição requer um parâmetro de consulta 'idAparelho' para especificar o dispositivo a ser atualizado. O corpo da requisição deve estar em formato bruto e incluir as chaves 'nomeAparelho' e 'musculoAtivado' para atualizar, respectivamente, o nome do dispositivo e o grupo muscular ativado.\n\n**Resposta**  \nA resposta dessa requisição é um esquema JSON que representa as informações atualizadas do dispositivo. O esquema incluirá as propriedades e os tipos de dados do objeto do dispositivo atualizado."
+					},
+					"response": []
+				},
+				{
+					"name": "REMOVER APARELHO",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Niwibm9tZSI6IkFETUlOIiwiZW1haWwiOiJhZG1pbkB0cmVpbm90b3RhbC5jb20iLCJpYXQiOjE3MzA3Mjc5MzIsImV4cCI6MTczMDc0MjMzMn0.ljMADPuRUrACUi7WaIIsRauIXl_cVnOm6awOY8GBOfo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3333/remover/aparelho?idAparelho=14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"remover",
+								"aparelho"
+							],
+							"query": [
+								{
+									"key": "idAparelho",
+									"value": "14"
+								}
+							]
+						},
+						"description": "##### Atualizar Aparelho\n\nEste endpoint é usado para deletar um dispositivo específico pelo seu ID.\n\n**Requisição**  \nMétodo: PUT  \nURL: [http://localhost:3333/deletar-aparelho](http://localhost:3333/deletar-aparelho)  \nParâmetros de Consulta:  \nidAparelho (número, obrigatório): O ID do dispositivo a ser deletado.\n\n**Resposta**  \nA resposta para esta requisição é um objeto JSON com o seguinte esquema:\n\n``` json\n{\n  \"message\": \"string\"\n}\n\n ```\n\nmessage (string): Uma mensagem indicando o resultado da operação de deleção."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EXERCICIO",
+			"item": [
+				{
+					"name": "LISTAR EXERCÍCIOS",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Niwibm9tZSI6IkFETUlOIiwiZW1haWwiOiJhZG1pbkB0cmVpbm90b3RhbC5jb20iLCJpYXQiOjE3MzA3Mjc5MzIsImV4cCI6MTczMDc0MjMzMn0.ljMADPuRUrACUi7WaIIsRauIXl_cVnOm6awOY8GBOfo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3333/listar/exercicios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"listar",
+								"exercicios"
+							]
+						},
+						"description": "O endpoint listar-exercicios é uma requisição HTTP GET que recupera uma lista de exercícios.\n\n**Resposta**  \nA resposta desta requisição é um objeto JSON representando a lista de exercícios. Para documentar a resposta como um esquema JSON, você pode usar a estrutura da resposta para definir as propriedades, tipos de dados e quaisquer restrições para cada campo no objeto JSON."
+					},
+					"response": []
+				},
+				{
+					"name": "NOVO EXERCÍCIO",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Niwibm9tZSI6IkFETUlOIiwiZW1haWwiOiJhZG1pbkB0cmVpbm90b3RhbC5jb20iLCJpYXQiOjE3MzA3Mjc5MzIsImV4cCI6MTczMDc0MjMzMn0.ljMADPuRUrACUi7WaIIsRauIXl_cVnOm6awOY8GBOfo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idAparelho\": 3,\r\n    \"exercicio\": \"supino inclinado\",\r\n    \"regiaoCorpoAtivada\": \"peitoral\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/novo/exercicio",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"novo",
+								"exercicio"
+							]
+						},
+						"description": "Este endpoint permite criar um novo exercício realizando uma requisição HTTP POST para a URL especificada. A requisição deve incluir o \"idAparelho\" representando o equipamento, \"exercicio\" representando o nome do exercício e \"regiaoCorpoAtivada\" representando a região do corpo ativada no corpo da requisição.\n\n**Resposta**  \nA resposta desta requisição é um objeto JSON representando o exercício criado. Você pode esperar que a resposta tenha propriedades como \"id\", \"idAparelho\", \"exercicio\" e \"regiaoCorpoAtivada\" indicando os detalhes do exercício.\n\n``` json\n{\n  \"id\": \"string\",\n  \"idAparelho\": \"number\",\n  \"exercicio\": \"string\",\n  \"regiaoCorpoAtivada\": \"string\"\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "ATUALIZA EXERCÍCIO",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Niwibm9tZSI6IkFETUlOIiwiZW1haWwiOiJhZG1pbkB0cmVpbm90b3RhbC5jb20iLCJpYXQiOjE3MzA3Mjc5MzIsImV4cCI6MTczMDc0MjMzMn0.ljMADPuRUrACUi7WaIIsRauIXl_cVnOm6awOY8GBOfo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idAparelho\": 3,\r\n    \"exercicio\": \"supino declinado\",\r\n    \"regiaoCorpoAtivada\": \"peitoral\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/atualizar/exercicio?idExercicio=23",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"atualizar",
+								"exercicio"
+							],
+							"query": [
+								{
+									"key": "idExercicio",
+									"value": "23"
+								}
+							]
+						},
+						"description": "Atualizar Exercício  \nEste endpoint é utilizado para atualizar um exercício pelo seu ID.\n\n**Requisição**  \nMétodo: PUT  \nURL: [http://localhost:3333/atualizar-exercicio?idExercicio=23](http://localhost:3333/atualizar-exercicio?idExercicio=23)\n\n``` json\n{\n  \"idAparelho\": (number) O ID do equipamento,\n  \"exercicio\": (string) O nome do exercício,\n  \"regiaoCorpoAtivada\": (string) A região do corpo ativada\n}\n\n ```\n\n**Resposta**  \nA resposta para esta requisição será um objeto JSON com os detalhes atualizados do exercício.\n\n**JSON Schema**\n\n``` json\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"idExercicio\": {\n      \"type\": \"number\"\n    },\n    \"idAparelho\": {\n      \"type\": \"number\"\n    },\n    \"exercicio\": {\n      \"type\": \"string\"\n    },\n    \"regiaoCorpoAtivada\": {\n      \"type\": \"string\"\n    }\n  }\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "REMOVE EXERCÍCIO",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Niwibm9tZSI6IkFETUlOIiwiZW1haWwiOiJhZG1pbkB0cmVpbm90b3RhbC5jb20iLCJpYXQiOjE3MzA3Mjc5MzIsImV4cCI6MTczMDc0MjMzMn0.ljMADPuRUrACUi7WaIIsRauIXl_cVnOm6awOY8GBOfo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3333/remover/exercicio?idExercicio=23",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"remover",
+								"exercicio"
+							],
+							"query": [
+								{
+									"key": "idExercicio",
+									"value": "23"
+								}
+							]
+						},
+						"description": "##### Atualizar Exclusão de Exercício\n\nEste endpoint permite ao cliente excluir um exercício específico enviando uma requisição HTTP PUT para o servidor com o ID do exercício como parâmetro de consulta.\n\n**Corpo da Requisição**  \nNenhum corpo de requisição é necessário para este endpoint.\n\n**Resposta**  \nO servidor responderá com uma mensagem de sucesso se o exercício com o ID fornecido for excluído com sucesso.  \nSe o ID do exercício não for encontrado, o servidor responderá com uma mensagem de erro indicando que o exercício não existe."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TREINO",
+			"item": [
+				{
+					"name": "LISTAR TREINOS - NOME ALUNO",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Niwibm9tZSI6IkFETUlOIiwiZW1haWwiOiJhZG1pbkB0cmVpbm90b3RhbC5jb20iLCJpYXQiOjE3MzA3Mjc5MzIsImV4cCI6MTczMDc0MjMzMn0.ljMADPuRUrACUi7WaIIsRauIXl_cVnOm6awOY8GBOfo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3333/listar/treino?nomeAluno=BIANCA LARA SANDRA PINTO",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"listar",
+								"treino"
+							],
+							"query": [
+								{
+									"key": "nomeAluno",
+									"value": "BIANCA LARA SANDRA PINTO"
+								}
+							]
+						},
+						"description": "Este endpoint envia uma requisição HTTP GET para recuperar uma lista de dados de treino de um estudante específico. A requisição inclui um parâmetro de consulta \"nomeAluno\", que contém o nome do aluno para o qual os dados de treino estão sendo recuperados.\n\n**Requisição**  \n**Método:** GET  \n**Endpoint:** [http://localhost:3333/listar/treino](http://localhost:3333/listar/treino)  \n**Parâmetros de Consulta:**\n\n- **nomeAluno** (string, obrigatório): O nome do aluno para o qual os dados de treino estão sendo recuperados.\n    \n\n**Resposta**  \nA resposta será um objeto JSON contendo os dados de treino para o aluno especificado. Abaixo está um esquema JSON representando a estrutura da resposta:\n\n``` json\n{\n  \"type\": \"object\",\n  \"properties\": {\n    // Adicione propriedades com base nos dados reais da resposta\n  }\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "LISTAR TREINOS - MATRICULA ALUNO",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Niwibm9tZSI6IkFETUlOIiwiZW1haWwiOiJhZG1pbkB0cmVpbm90b3RhbC5jb20iLCJpYXQiOjE3MzA3Mjc5MzIsImV4cCI6MTczMDc0MjMzMn0.ljMADPuRUrACUi7WaIIsRauIXl_cVnOm6awOY8GBOfo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3333/listar/treino?matricula=20241005",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"listar",
+								"treino"
+							],
+							"query": [
+								{
+									"key": "matricula",
+									"value": "20241005"
+								}
+							]
+						},
+						"description": "Este endpoint faz uma requisição HTTP GET para recuperar os dados de treino de um estudante específico identificado por sua matrícula. A requisição deve ser enviada para [http://localhost:3333/listar/treino](http://localhost:3333/listar/treino) com o parâmetro matrícula definido para o número da matrícula do aluno.\n\n**Resposta**  \nA resposta para esta requisição é esperada ser um objeto JSON representando os dados de treino. Para documentar a resposta, o esquema JSON pode ser definido da seguinte forma:\n\n``` json\n{\n  \"type\": \"object\",\n  \"properties\": {\n    // Defina as propriedades do objeto JSON da resposta com base nos dados reais da resposta\n  }\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "LISTAR TREINOS - ID TREINO",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Niwibm9tZSI6IkFETUlOIiwiZW1haWwiOiJhZG1pbkB0cmVpbm90b3RhbC5jb20iLCJpYXQiOjE3MzA3Mjc5MzIsImV4cCI6MTczMDc0MjMzMn0.ljMADPuRUrACUi7WaIIsRauIXl_cVnOm6awOY8GBOfo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3333/listar/treino?idTreino=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"listar",
+								"treino"
+							],
+							"query": [
+								{
+									"key": "idTreino",
+									"value": "3"
+								}
+							]
+						},
+						"description": "**GET /listar/treino**  \nEste endpoint recupera os detalhes de um treino específico com o ID fornecido.\n\n**Requisição**  \nMétodo: GET  \nURL: [http://localhost:3333/listar/treino](http://localhost:3333/listar/treino)  \nParâmetros de Consulta:\n\n- **idTreino** (inteiro, obrigatório): O ID do treino a ser recuperado.\n    \n\n**Resposta**  \nA resposta será um objeto JSON com o seguinte esquema:\n\n``` json\n{\n  \"id\": \"string\",\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"duration\": \"string\",\n  \"intensity\": \"string\",\n  \"exercises\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"sets\": \"string\",\n      \"reps\": \"string\"\n    }\n  ]\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "NOVO TREINO",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Niwibm9tZSI6IkFETUlOIiwiZW1haWwiOiJhZG1pbkB0cmVpbm90b3RhbC5jb20iLCJpYXQiOjE3MzA3Mjc5MzIsImV4cCI6MTczMDc0MjMzMn0.ljMADPuRUrACUi7WaIIsRauIXl_cVnOm6awOY8GBOfo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idAluno\": 5,\r\n    \"idProfessor\": 2,\r\n    \"exercicios\": [\r\n        {\r\n            \"idAparelho\": 1,\r\n            \"carga\": 10,\r\n            \"series\": 3,\r\n            \"repeticoes\": 10\r\n        },\r\n        {\r\n            \"idAparelho\": 2,\r\n            \"carga\": 20,\r\n            \"series\": 3,\r\n            \"repeticoes\": 10\r\n        },\r\n        {\r\n            \"idAparelho\": 3,\r\n            \"carga\": 30,\r\n            \"series\": 3,\r\n            \"repeticoes\": 10\r\n        },\r\n        {\r\n            \"idAparelho\": 4,\r\n            \"carga\": 40,\r\n            \"series\": 3,\r\n            \"repeticoes\": 10\r\n        },\r\n        {\r\n            \"idAparelho\": 5,\r\n            \"carga\": 50,\r\n            \"series\": 3,\r\n            \"repeticoes\": 10\r\n        },\r\n        {\r\n            \"idAparelho\": 6,\r\n            \"carga\": 60,\r\n            \"series\": 3,\r\n            \"repeticoes\": 10\r\n        },\r\n        {\r\n            \"idAparelho\": 7,\r\n            \"carga\": 70,\r\n            \"series\": 3,\r\n            \"repeticoes\": 10\r\n        },\r\n        {\r\n            \"idAparelho\": 8,\r\n            \"carga\": 80,\r\n            \"series\": 3,\r\n            \"repeticoes\": 10\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/novo/treino",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"novo",
+								"treino"
+							]
+						},
+						"description": "**Adicionar Novo Treino**  \nEste endpoint permite adicionar uma nova sessão de treino para um estudante específico.\n\n**Corpo da Requisição**\n\n- **idAluno** (inteiro) - O ID do aluno para quem a sessão de treino está sendo adicionada.\n    \n- **idProfessor** (inteiro) - O ID do professor que está criando a sessão de treino.\n    \n- **exercicios** (array) - Um array de exercícios incluídos na sessão de treino, cada um contendo os seguintes parâmetros:\n    \n    - **idAparelho** (inteiro) - O ID do equipamento de exercício.\n        \n    - **carga** (inteiro) - O peso utilizado para o exercício.\n        \n    - **series** (inteiro) - O número de séries para o exercício.\n        \n    - **repeticoes** (inteiro) - O número de repetições para cada série do exercício.\n        \n\n**Resposta**  \nA resposta incluirá o status da requisição, juntamente com quaisquer dados relevantes ou mensagens de erro."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@treinototal.com\",\r\n    \"senha\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"login"
+					]
+				},
+				"description": "### Login\n\nEste endpoint é utilizado para autenticar um usuário e obter um token para acessar recursos protegidos.\n\n#### Corpo da Requisição (Request Body)\n\n- `email` (string): O endereço de e-mail do usuário.\n    \n- `senha` (string): A senha do usuário.\n    \n\n#### Resposta (Response)\n\nA resposta incluirá um token que pode ser utilizado para acessar recursos protegidos."
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,75 @@
+/* Formulário principal */
+.formulario-atualizar {
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    border: 1px solid #565e64;
+
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.labell {
+    font-size: 14px;
+    font-weight: bold;
+    height: 15px;
+    margin-bottom: 5px; /* Ajustado para elevar os labels 5px acima dos inputs */
+}
+
+input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+/* Grupos de campos relacionados */
+.grupo-celular-nasc,
+.grupo-cpf-contrato,
+.grupo-formacao-espec {
+    display: flex;
+    gap: 20px;
+}
+
+.grupo-celular-nasc .campo,
+.grupo-cpf-contrato .campo,
+.grupo-formacao-espec .campo {
+    flex: 1;
+}
+
+/* Botões */
+.botao-enviar,
+.botao-voltar {
+    padding: 12px 20px;
+    background-color: #FCA311;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 16px;
+}
+
+.botao-enviar:hover,
+.botao-voltar:hover {
+    background-color: #FCA311;
+}
+
+.botao-voltar {
+    background-color: #FCA311;
+}
+
+.botao-voltar:hover {
+    background-color: #FCA311;
+}

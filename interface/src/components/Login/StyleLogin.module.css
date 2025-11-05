@@ -1,0 +1,155 @@
+/* Definição das cores principais */
+
+/*
+:root {
+    --amareloClaro: #ffeba7;
+    --cinzaEscuro: #212529;
+    --cinzaAzulado: #343A40;
+    --cinzaAvermelhado: #333;
+    --branco: #FFFFFF;
+    --cinzaClaro: #ccc;
+    --amareloEscuro: #b39f72;
+    --preto: #000000;
+}
+*/
+
+.box {
+    background-color: #E5E5E5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.divConteiner {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerLogin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formLogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    width: 85vh;
+    margin-top: 1%;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #f1efef;
+    color: black;
+}
+
+.inpuLogin {
+    width: 100%;
+    max-width: 340px;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid black;
+    font-size: 16px;
+
+}
+
+.inpuLogin::-webkit-input-placeholder {
+    color: black;
+}
+
+.buttonLogin {
+    display: inline-block;
+    width: 35%;
+    padding: 15px 25px;
+    background-color: var(--cinzaAzulado);
+    font-size: 18px;
+    color: var(--amareloClaro);
+    border: 3px solid var(--amareloClaro);
+    border-radius: 27px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Estilos de hover para o botão */
+.buttonLogin:hover {
+    background-color: var(--amareloEscuro);
+    color: var(--branco);
+    transition: background-color 0.2s ease;
+}
+
+.h1 {
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    font-size: 40px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    height: 10px;
+}
+
+.inpuPassword {
+    width: 100%;
+    max-width: 340px;
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+    font-size: 16px;
+    color: black;
+}
+
+/* Adicionando o wrapper para o campo de senha e o ícone */
+.passwordWrapper {
+    display: flex;
+    align-items: center;
+    position: relative; /* Necessário para o posicionamento absoluto do ícone */
+    width: 100%;
+    max-width: 390px;
+    margin: 10px;
+}
+
+.cadeado {
+   
+    font-size: 1.5em;
+}
+
+/* Estilos do input dentro do passwordWrapper */
+.Wrapper .inpuPassword {
+    flex: 1;
+}
+
+.email{
+    margin-right: 10px;
+    font-size: 1.5em;
+    color: black;
+}
+
+.emailWrapper{
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 390px;
+    margin: 10px;
+    border: 1px;
+}
+
+
+.person{
+    
+    width: 100px;
+    height: 100px;
+
+}
+

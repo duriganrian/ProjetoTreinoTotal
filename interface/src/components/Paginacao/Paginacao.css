@@ -1,0 +1,35 @@
+.paginacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .paginacao button {
+    background-color: #fca311;
+    color: #14213D;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+  .paginacao button:hover {
+    background-color: #ffd700;
+  }
+  
+  .paginacao button.active {
+    background-color: #14213D;
+    color: #fff;
+  }
+  
+  .paginacao button:first-child {
+    margin-left: 0;
+  }
+  
+  .paginacao button:last-child {
+    margin-right: 0;
+  }

@@ -1,0 +1,129 @@
+/* Estilos gerais da página de treinos */
+.bodyTreinos {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fca311 !important;
+  }
+  
+  /* Estilos para a seção de busca de treinos */
+  .sectionBuscaTreino {
+    width: 50px;
+    background-color: var(--cinzaAzulado);
+    margin-top: 10px !important;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Estilo para o campo de busca de treino */
+  .inputBuscaTreino {
+    width: 100px;
+    height: 2.5rem;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid #14213D;
+    padding-left: 10px;
+    margin-bottom: 10px !important;
+    display: flex;
+    align-items: center !important;
+  }
+  
+  /* Estilos para o contêiner de treinos */
+  .containerTreinos {
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Estilo para o título da listagem de treinos */
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 2.5em;
+    color: #14213D;
+  }
+  
+  /* Estilos para a tabela de treinos */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+  }
+  
+  table th {
+    background-color: #14213D;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #dddddd;
+  }
+  
+  table td {
+    font-size: small;
+    padding: 10px;
+    color: #14213D;
+    border: 1px solid #dddddd;
+    text-align: center;
+  }
+  
+  /* Estilos para as linhas ímpares da tabela de treinos */
+  tbody tr:nth-child(odd) {
+    background-color: #f8f9fa;
+  }
+  
+  /* Estilo para as linhas ao passar o mouse */
+  tbody tr:hover {
+    background-color: #e6e6e6;
+  }
+  
+  /* Estilo para mensagens de carregamento ou erro na tabela */
+  table td[colspan="7"] {
+    text-align: center;
+    font-weight: bold;
+    color: #14213D;
+  }
+  
+  /* Estilos para os botões de paginação de treinos */
+  .paginationTreino {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .paginationTreino li {
+    margin: 0 5px;
+  }
+  
+  .paginationTreino li a {
+    text-decoration: none;
+    padding: 8px 12px;
+    color: #14213D;
+    background-color: white;
+    border: 1px solid #14213D;
+    border-radius: 5px;
+  }
+  
+  .paginationTreino li a:hover {
+    background-color: #fca311;
+    color: white;
+  }
+  
+  /* Estilos para mensagens de status de carregamento e erro */
+  .loadingTreino,
+  .errorTreino {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #14213D;
+    margin-top: 20px;
+  }
+  
+  .inputBusca{
+    width: 500px;
+   margin-left: 35%;
+   height: 40px;
+   margin-bottom: 10px;
+  }

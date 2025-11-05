@@ -1,0 +1,9 @@
+version: "3"
+services:
+  web:
+    build: .
+    container_name: "web-treinototal-sparky"
+    ports:
+      - "3406:80"
+    stdin_open: true
+    tty: true

@@ -1,0 +1,94 @@
+/* FormAluno.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.form-aluno-box {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.form-aluno-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-aluno-titulo {
+  font-size: 24px;
+  color: #002B54;
+  font-weight: bold;
+}
+
+.form-aluno-lista {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-aluno-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.form-aluno-campo {
+  margin-bottom: 15px;
+  flex: 1;
+}
+
+.form-aluno-label {
+  font-size: 14px;
+  color: #002B54;
+  margin-bottom: 10px; /* Increased margin to create more space */
+  display: block;
+}
+
+.form-aluno-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+input[type="date"] {
+  padding-right: 15px;
+}
+
+.form-aluno-resultado {
+  font-size: 16px;
+  color: #28a745;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.form-aluno-botoes {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 10px; /* Space between the buttons */
+  margin-top: 20px;
+}
+
+.form-aluno-submit,
+.form-aluno-navegar {
+  background-color: #ffaa00;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.form-aluno-submit:hover,
+.form-aluno-navegar:hover {
+  background-color: #e69900;
+}

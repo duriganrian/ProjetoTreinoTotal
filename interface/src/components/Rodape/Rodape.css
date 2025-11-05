@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Kolker+Brush&display=swap');
+
+.h1-frase {
+    font-size: 70px;
+    font-family: "Kolker Brush";
+    padding-top: 2.5%;
+    font-weight: 200;
+    margin: 0;
+}
+
+.p-rodape {
+    font-size: 15px;
+}
+
+img {
+    width: 6 0px;
+    height: 60px;
+    
+}
+
+.rodape {
+    background-color: #fca311;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    border-color: black;
+    border: 2px solid;
+}
+
+.container-rodape {
+    max-width: 1200px;
+    margin-left: 0 auto;
+    text-align: center;
+    flex-grow: 1; /* Faz a div crescer conforme necessário */
+    font-size: 10px;
+}
+
+/* Estilos para a imagem gojo */
+.gojo {
+    float: right;
+    height: 452px;
+}
+
+@media screen and (max-width: 990px) {
+
+    .gojo {
+        display: none;
+        width: 100%;
+    }
+
+    .rodape::before{
+        display: none;
+    }
+}
+
+.rodape::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0%; /* As bolinhas desaparecem antes da metade da tela */
+    background: 
+        radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.999) 2%, transparent 5%) 0 0 / 40px 50px;
+    pointer-events: none; /* Garante que o pseudo-elemento não interfira na interação do usuário */
+    z-index: 0;
+}

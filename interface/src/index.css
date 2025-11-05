@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap');
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  font-family: "Kanit", system-ui;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: inherit;
+}
+
+body {
+  margin: 0;
+  /* place-items: center; */
+}
+
+h1 {
+  font-size: 3.1em;
+  line-height: 1.2;
+}
+
+
+
+

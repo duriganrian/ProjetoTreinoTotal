@@ -1,0 +1,77 @@
+/* Estilos gerais para o formulário de atualização do aparelho */
+.formulario-atualizar-aparelho {
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f4; /* Cor de fundo do formulário */
+    padding: 30px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    max-width: 600px; /* Largura máxima do formulário */
+    margin: 0 auto; /* Centraliza o formulário */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra do formulário */
+    font-family: 'Arial', sans-serif; /* Fonte do formulário */
+    border: 1px solid #14213D; /* Borda do formulário */
+  }
+  
+  /* Estilo para o título do formulário */
+  .titulo-atualizar-aparelho {
+    text-align: center; /* Centraliza o título */
+    color: #14213D; /* Cor do texto do título */
+    font-family: 'Roboto', sans-serif; /* Fonte do título */
+    font-size: 28px; /* Tamanho da fonte do título */
+    margin-bottom: 20px; /* Margem abaixo do título */
+  }
+  
+  /* Estilo para os rótulos dos campos */
+  .rotulo-formulario {
+    display: block; /* Exibe como bloco */
+    font-weight: bold; /* Negrito */
+    margin-bottom: 10px; /* Margem abaixo do rótulo */
+    color: #14213D; /* Cor do texto do rótulo */
+  }
+  
+  /* Estilo para campos de entrada */
+  .input-formulario {
+    width: 100%; /* Largura total */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda padrão */
+    border-radius: 8px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    margin-bottom: 20px; /* Margem abaixo do campo */
+    box-sizing: border-box; /* Inclui padding e bordas na largura total */
+    font-family: 'Arial', sans-serif; /* Fonte dos campos */
+  }
+  
+  /* Estilo para campos de entrada em foco */
+  .input-formulario:focus {
+    border-color: #007BFF; /* Cor da borda ao focar */
+    outline: none; /* Remove o contorno padrão */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra ao focar */
+  }
+  
+  /* Estilo para a seção de ações do formulário */
+  .acoes-formulario {
+    display: flex; /* Flexbox para organizar os botões */
+    gap: 10px; /* Espaçamento entre os botões */
+    margin-top: 20px; /* Margem acima da seção */
+  }
+  
+  /* Estilo para os botões */
+  .botao-enviar,
+  .botao-voltar {
+    background-color: #FCA311; /* Cor de fundo dos botões */
+    color: white; /* Cor do texto dos botões */
+    border: none; /* Remove borda padrão */
+    padding: 10px 20px; /* Espaçamento interno dos botões */
+    border-radius: 8px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor para pointer */
+    font-size: 16px; /* Tamanho da fonte dos botões */
+    transition: background-color 0.3s; /* Transição de cor ao passar o mouse */
+    width: 100%; /* Largura total dos botões */
+  }
+  
+  /* Efeito hover nos botões */
+  .botao-enviar:hover,
+  .botao-voltar:hover {
+    background-color: #e5941f; /* Cor ao passar o mouse */
+  }
+      

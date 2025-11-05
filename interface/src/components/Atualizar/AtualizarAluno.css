@@ -1,0 +1,115 @@
+/* Estilos gerais para o formulário de atualização do aluno */
+.FormAtualizarAluno {
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f4f4;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  border: 1px solid #14213D;
+}
+
+h1 {
+  text-align: center;
+  color: #14213D;
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.label-atualizar {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #14213D;
+  width: 100%;
+  height: 15vh!important;
+}
+
+/* Estilo para campos de entrada */
+.FormAtualizarAluno input[type="text"],
+.FormAtualizarAluno input[type="number"],
+.FormAtualizarAluno input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+.FormAtualizarAluno input[type="text"]:focus,
+.FormAtualizarAluno input[type="number"]:focus,
+.FormAtualizarAluno input[type="date"]:focus {
+  border-color: #007BFF;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Estilo para os grupos de campos */
+.GrupoAtualizarAluno,
+.GrupoMedidas {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Estilo para os rótulos dentro dos grupos */
+.GrupoAtualizarAluno label,
+.GrupoMedidas label {
+  width: 48%;
+}
+
+/* Estilo para os botões */
+.BotaoCalcularIMC,
+.BotaoEnviar,
+.BotaoVoltar {
+  background-color: #FCA311;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.BotaoCalcularIMC:hover,
+.BotaoEnviar:hover,
+.BotaoVoltar:hover {
+  background-color: #e5941f;
+}
+
+.BotaoVoltar {
+  margin-top: 10px;
+  background-color: #FCA311;
+  text-align: center;
+}
+
+/* Estilo para campos de entrada com máscara */
+input[type="text"].CampoAluno,
+input[type="number"].CampoAluno {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+input[type="text"].CampoAluno:focus,
+input[type="number"].CampoAluno:focus {
+  border-color: #007BFF;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}

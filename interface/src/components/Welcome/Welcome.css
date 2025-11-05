@@ -1,0 +1,104 @@
+/* Carousel styles */
+.welcome-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.welcome {
+  width: 60%;
+  margin: 20px;
+}
+
+.carousel {
+  width: 100%;
+  height: 10% !important;
+  margin: 10 auto;
+  border-radius: 10px !important;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.legend {
+  position:absolute;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 1;
+  background-color: #FCA311;
+}
+
+.custom-arrow:hover{
+    background-color: #b1720c ;
+}
+
+.custom-prev {
+  left: 20px;
+}
+
+.custom-next {
+  right: 20px;
+}
+
+/* Card styles */
+.introduction {
+  width: 30%;
+  margin: 20px;
+}
+
+.card {
+  width: 100%;
+  height: 50%;
+  border: 2px solid #FCA311 !important;
+  border-radius: 10px !important;
+  box-shadow: 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+.card img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-content {
+  padding: 20px;
+  height: 60%;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 16px;
+  color: #666;
+}
+
+.card-button {
+  background-color: #FCA311;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.card-button:hover {
+  background-color: #b1720c !important;
+}

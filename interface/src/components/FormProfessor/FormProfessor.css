@@ -1,0 +1,91 @@
+/* FormProfessor.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  .container-formulario {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+  }
+  
+  .titulo-formulario {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333333;
+  }
+  
+  .secao-formulario {
+    margin-bottom: 15px; /* Espaçamento entre seções */
+  }
+  
+  .secao-formulario-flex {
+    display: flex; /* Exibe os inputs em linha */
+    justify-content: space-between; /* Espaço entre os inputs */
+    gap: 10px; /* Espaçamento entre inputs */
+  }
+  
+  .container-input {
+    flex: 1; /* Permite que os inputs flexionem para ocupar espaço */
+  }
+  
+  .rotulo-input {
+    font-size: 14px;
+    color: #555555;
+    margin-bottom: 10px; /* Distância aumentada entre label e input */
+    display: block;
+  }
+  
+  .campo-input {
+    width: 100%; /* Ocupa 100% da largura do container */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  
+  input[type="date"] {
+    padding-right: 15px; /* Adiciona espaço à direita em inputs de data */
+  }
+  
+  .rodape-formulario {
+    display: flex;
+    flex-direction: column; /* Coloca os botões em coluna */
+    gap: 10px; /* Espaçamento entre botões */
+    margin-top: 20px; /* Espaço acima do rodapé */
+  }
+  
+  .buttonpe{
+    background-color: #ffaa00; /* Cor de fundo dos botões */
+    color: #ffffff; /* Cor do texto dos botões */
+    border: none; /* Remove borda padrão */
+    padding: 10px 20px; /* Espaçamento interno dos botões */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+    width: 100%; /* Botões ocupam 100% da largura */
+  }
+  .buttonpv {
+    background-color: #ffaa00; /* Cor de fundo dos botões */
+    color: #ffffff; /* Cor do texto dos botões */
+    border: none; /* Remove borda padrão */
+    padding: 10px 20px; /* Espaçamento interno dos botões */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+    width: 100%; /* Botões ocupam 100% da largura */
+  }
+  
+  .buttonpe:hover,
+  .buttonpv:hover {
+    background-color: #e69900; /* Cor de fundo ao passar o mouse */
+  }
+  
